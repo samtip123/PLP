@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pamantasan ng Lungsod ng Pasig Alumni Login</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f4e9;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .login-container {
+            background-color: #ffffff;
+            border: 2px solid #006400;
+            border-radius: 10px;
+            padding: 40px;
+            width: 320px;  /* Adjust width to avoid stretching */
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+            text-align: center;
+        }
+        .logo-container {
+            display: flex;
+            justify-content: center;
+            gap: 15px;  /* Space between logos */
+            margin-bottom: 20px;
+        }
+        .logo {
+            width: 80px;  /* Adjust logo size */
+            height: auto;
+        }
+        .login-container h2 {
+            color: #006400;
+            margin-bottom: 20px;
+            font-size: 1.5em;  /* Increase font size for better readability */
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        label {
+            display: block;
+            color: #333;
+            margin-bottom: 5px;
+            font-size: 1em;  /* Adjust font size for labels */
+        }
+        input[type="text"],
+        input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            outline: none;
+            font-size: 1em;  /* Adjust font size for input fields */
+        }
+        .submit-button {
+            width: 100%;
+            padding: 12px;
+            background-color: #ffd700;
+            border: none;
+            border-radius: 5px;
+            color: #006400;
+            font-weight: bold;
+            cursor: pointer;
+            transition: 0.3s;
+            font-size: 1.1em;  /* Increase button font size */
+            margin-bottom: 10px; /* Adds space below the login button */
+        }
+        .submit-button:hover {
+            background-color: #ffcc00;
+        }
+        .error-message {
+            color: red;
+            font-size: 0.9em;
+            display: none;
+        }
+        .signup-link {
+            color: #006400;
+            font-size: 1em;
+            text-decoration: none;
+            font-weight: bold;
+            display: inline-block;  /* Makes the sign-up link a block to control spacing */
+            margin-top: 10px;  /* Adds margin above the signup link */
+        }
+        .signup-link:hover {
+            color: #ffcc00;
+        }
+    </style>
+</head>
+<body>
+
+<div class="login-container">
+    <!-- Two Logos at the top -->
+    <div class="logo-container">
+        <img src="img/logo.png" alt="PLP Logo 1" class="logo">
+        <img src="img/plp.png" alt="PLP Logo 2" class="logo">
+    </div>
+
+    <h2>PLP Alumni Login</h2>
+    <form onsubmit="return validateLogin(event)">
+        <div class="form-group">
+            <label for="username">Username</label>
+            <input type="text" id="username" name="username" required>
+        </div>
+        <div class="form-group">
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" required>
+        </div>
+        <p id="error-message" class="error-message">Invalid username or password</p>
+        <button type="submit" class="submit-button">Log In</button>
+    </form>
+    <a href="signup.html" class="signup-link">Don't have an account? Sign up</a>
+</div>
+
+<script>
+    function validateLogin(event) {
+        event.preventDefault();
+
+        const username = document.getElementById('username').value;
+        const password = document.getElementById('password').value;
+        const errorMessage = document.getElementById('error-message');
+
+        if (username === 'alumni' && password === 'password123') {
+            window.location.href = 'alumni_dashboard.html';
+        } else {
+            errorMessage.style.display = 'block';
+        }
+    }
+</script>
+
+</body>
+</html>

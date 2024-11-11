@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PLP Alumni Employability Tracker</title>
+    <style>
+        /* Basic CSS styling */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f4e9;
+            margin: 0;
+            color: #333;
+        }
+        .header {
+            background-color: #006400;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+        .header img {
+            width: 50px; /* Adjust the width as needed */
+            height: auto;
+            position: absolute; /* Position logos to the left and right */
+        }
+        .header h1 {
+            margin: 0;
+            font-size: 1.8em;
+            position: relative; /* Ensure h1 text is not overlapping logos */
+        }
+        .header .logo-left {
+            left: 20px; /* Position logo on the left side of the header */
+        }
+        .header .logo-right {
+            right: 20px; /* Position logo on the right side of the header */
+        }
+        .banner {
+            display: flex;
+            align-items: center;
+            padding: 50px;
+            background-color: #f7fcf0;
+            flex-direction: row-reverse; /* Swap the image and text */
+        }
+        .banner img {
+            max-width: 100%;
+            border-radius: 10px;
+            padding-left: 30px;
+        }
+        .banner-content h1 {
+            color: #006400;
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            text-align: left; /* Align text to the left */
+        }
+        .buttons {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            align-items: flex-start; /* Aligns buttons to the left side */
+            position: absolute; /* Position buttons on the left side of the banner */
+            left: 50px;
+        }
+        .button {
+            padding: 10px 20px;
+            background-color: #ffd700;
+            border: none;
+            color: #006400;
+            font-weight: bold;
+            border-radius: 5px;
+            text-align: center;
+            width: 150px;
+            text-decoration: none;
+            transition: 0.3s;
+        }
+        .button:hover {
+            background-color: #ffcc00;
+        }
+        .footer {
+            background-color: #006400;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <div class="header">
+        <img src="img/logo.png" alt="PLP Logo 1" class="logo-left"> <!-- Replace with the actual path to the first logo -->
+        <h1>Pamantasan ng Lungsod ng Pasig Alumni Employability Tracker</h1>
+        <img src="img/plp.png" alt="PLP Logo 2" class="logo-right"> <!-- Replace with the actual path to the second logo -->
+    </div>
+
+    <!-- Banner Section -->
+    <div class="banner">
+        <img src="img/back.png" alt="Graduates celebrating" width="600px"> <!-- Replace with the actual path to the banner image -->
+        <div class="banner-content">
+            <h1>Empowering Your Career, Journey – Track, Forecast, and Grow with PLP</h1>
+            <div class="buttons">
+                <a href="alumni.html" class="button">Alumni Login</a>
+                <a href="signup.html" class="button">Don't have an account? Sign up</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+        <p>&copy; 2024 Pamantasan ng Lungsod ng Pasig. All Rights Reserved.</p>
+    </div>
+
+</body>
+</html>
